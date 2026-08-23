@@ -1,0 +1,123 @@
+/* Binance-Inspired Manual Entry Form Styles */
+
+.manual-entry-card {
+  background: var(--bg-card);
+  border-radius: 4px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.manual-entry-card h2 {
+  font-size: 1.5rem;
+  color: var(--text-strong);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Letter Buttons Grid */
+.letter-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Dark Elevated Pills for Letter Buttons */
+.letter-button {
+  aspect-ratio: 1;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+}
+
+.letter-button:hover:not(:disabled) {
+  background: var(--bg-elevated-strong);
+  border-color: var(--border-strong);
+}
+
+/* Selected state - Binance Yellow */
+.letter-button.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.letter-button.selected:hover {
+  background: var(--primary-active);
+  border-color: var(--primary-active);
+}
+
+.letter-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Prominent Binance Yellow CTA Button */
+.submit-button {
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: var(--text-on-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--primary-active);
+}
+
+.submit-button:active:not(:disabled) {
+  background: #E1A409;
+}
+
+.submit-button:disabled {
+  background: var(--primary-disabled);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* Message Banners */
+.message {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background: rgba(14, 203, 129, 0.1);
+  border: 1px solid var(--success);
+  border-left: 4px solid var(--success);
+  color: var(--success);
+}
+
+.message.error {
+  background: rgba(246, 70, 93, 0.1);
+  border: 1px solid var(--danger);
+  border-left: 4px solid var(--danger);
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .letter-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .letter-button {
+    font-size: 1.5rem;
+  }
+}

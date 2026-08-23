@@ -1,0 +1,165 @@
+/* Binance-Inspired Dark Theme - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - Binance Color Palette */
+:root {
+  /* Backgrounds */
+  --bg-canvas: #0B0E11;
+  --bg-card: #1E2329;
+  --bg-elevated: #2B3139;
+  --bg-elevated-strong: #474D57;
+  
+  /* Primary Brand */
+  --primary: #FCD535;
+  --primary-active: #F0B90B;
+  --primary-disabled: #3A3A1F;
+  
+  /* Text Colors */
+  --text-primary: #EAECEF;
+  --text-strong: #FFFFFF;
+  --text-muted: #848E9C;
+  --text-muted-strong: #929AA5;
+  --text-on-primary: #181A20;
+  
+  /* Borders */
+  --border: #2B3139;
+  --border-strong: #474D57;
+  
+  /* Semantic Colors */
+  --success: #0ECB81;
+  --danger: #F6465D;
+  --info: #3B82F6;
+  --warning: #FFA726;
+  
+  /* Additional Trading Colors */
+  --accent-purple: #B377F8;
+  --accent-cyan: #2DBDB6;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Text Selection */
+::selection {
+  background-color: rgba(252, 213, 53, 0.3);
+  color: var(--text-strong);
+}
+
+::-moz-selection {
+  background-color: rgba(252, 213, 53, 0.3);
+  color: var(--text-strong);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-elevated-strong);
+}
+
+/* Typography Utilities */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-strong {
+  color: var(--text-strong);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-active);
+}
+
+/* Form Elements Base Styles */
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: var(--bg-elevated-strong);
+}
+
+input:disabled, select:disabled, textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Base Styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

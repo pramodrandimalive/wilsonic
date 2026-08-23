@@ -1,0 +1,23 @@
+# Wilsonic Backend Requirements
+
+# Core framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# Database
+sqlalchemy==2.0.36
+
+# Utilities
+pydantic==2.9.2
+python-dateutil==2.9.0
+
+# For stats calculations (Phase 1)
+numpy==2.1.1
+scipy==1.14.1
+
+# For data import (one-time historical data)
+pandas==2.2.2
+openpyxl==3.1.5
+
+# For testing (development)
+requests==2.32.3

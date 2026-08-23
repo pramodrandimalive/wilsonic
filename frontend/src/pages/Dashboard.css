@@ -1,0 +1,74 @@
+/* Binance-Inspired Dashboard Styles */
+
+/* Trend Chart Toggle Section */
+.trend-chart-toggle-section {
+  background: var(--bg-card);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trend-toggle-switch {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Binance Yellow Toggle Switch */
+.trend-toggle-switch input[type="checkbox"] {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  appearance: none;
+  background: var(--bg-elevated);
+  border-radius: 28px;
+  transition: background 0.3s;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.trend-toggle-switch input[type="checkbox"]:checked {
+  background: var(--primary);
+}
+
+.trend-toggle-switch input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text-strong);
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.trend-toggle-switch input[type="checkbox"]:checked::before {
+  left: 26px;
+  background: var(--text-on-primary);
+}
+
+.toggle-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.trend-loading {
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  color: var(--info);
+  font-size: 1.1rem;
+  font-weight: 500;
+}

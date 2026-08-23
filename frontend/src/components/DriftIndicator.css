@@ -1,0 +1,108 @@
+/* Binance-Inspired Drift Indicator Alert Banner */
+
+.drift-indicator {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid transparent;
+}
+
+.drift-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.drift-content {
+  flex: 1;
+}
+
+.drift-content strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-strong);
+}
+
+.drift-content p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.drift-content .at-risk {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  color: var(--text-muted);
+}
+
+/* Success state - green (no drift detected) */
+.drift-indicator.success {
+  background: rgba(14, 203, 129, 0.1);
+  border-color: var(--success);
+  border-left-color: var(--success);
+}
+
+.drift-indicator.success .drift-icon {
+  color: var(--success);
+}
+
+.drift-indicator.success .drift-content strong {
+  color: var(--success);
+}
+
+/* Info state - blue (monitoring) */
+.drift-indicator.info {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--info);
+  border-left-color: var(--info);
+}
+
+.drift-indicator.info .drift-icon {
+  color: var(--info);
+}
+
+.drift-indicator.info .drift-content strong {
+  color: var(--info);
+}
+
+/* Warning state - red (drift detected) */
+.drift-indicator.warning {
+  background: rgba(246, 70, 93, 0.1);
+  border-color: var(--danger);
+  border-left-color: var(--danger);
+}
+
+.drift-indicator.warning .drift-icon {
+  color: var(--danger);
+}
+
+.drift-indicator.warning .drift-content strong {
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .drift-indicator {
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+  
+  .drift-icon {
+    font-size: 1.5rem;
+  }
+  
+  .drift-content strong {
+    font-size: 0.95rem;
+  }
+  
+  .drift-content p {
+    font-size: 0.85rem;
+  }
+}
