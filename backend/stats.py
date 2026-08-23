@@ -13,7 +13,7 @@ from typing import Dict, List, Optional, Tuple
 from datetime import datetime
 from sqlalchemy.orm import Session
 from sqlalchemy import func, desc
-from models import Draw
+from .models import Draw
 
 
 # Valid letters in the lottery system

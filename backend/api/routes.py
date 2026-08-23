@@ -15,9 +15,9 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field, validator
 
-from database import get_db
-from models import Draw
-import stats
+from ..database import get_db
+from ..models import Draw
+from .. import stats
 
 
 # Create API router

@@ -50,5 +50,5 @@ def init_db():
     Initialize database by creating all tables.
     Should be called once at application startup.
     """
-    from models import Draw  # Import models to register them
+    from .models import Draw  # Import models to register them
     Base.metadata.create_all(bind=engine)

@@ -6,7 +6,7 @@ Defines the Draw model that stores historical lottery draw data.
 
 from datetime import datetime, timezone
 from sqlalchemy import Column, Integer, String, DateTime
-from database import Base
+from .database import Base
 
 
 class Draw(Base):

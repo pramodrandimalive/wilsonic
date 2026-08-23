@@ -9,8 +9,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
-from database import init_db
-from api.routes import router
+from .database import init_db
+from .api.routes import router
 
 
 # ============================================================================
