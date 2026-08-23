@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './RecordsManagement.css'
 
-const API_BASE = 'http://localhost:8000'
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 function RecordsManagement() {
   const [draws, setDraws] = useState([])

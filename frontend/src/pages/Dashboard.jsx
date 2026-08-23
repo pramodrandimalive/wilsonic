@@ -9,7 +9,8 @@ import WindowSizeSelector from '../components/WindowSizeSelector'
 import LetterTrendCards from '../components/LetterTrendCards'
 import RollingFrequencyChart from '../components/RollingFrequencyChart'
 
-const API_BASE = 'http://localhost:8000'
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 function Dashboard() {
   const [ranking, setRanking] = useState([])
