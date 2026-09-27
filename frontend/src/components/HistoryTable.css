@@ -23,7 +23,7 @@
 /* Elevated Dark Surface for Table Header */
 .table-header {
   display: grid;
-  grid-template-columns: 80px 1fr 100px;
+  grid-template-columns: 80px 1fr 160px;
   gap: 12px;
   padding: 12px;
   font-weight: 600;
@@ -38,7 +38,7 @@
 /* Table Rows with Subtle Alternating Backgrounds */
 .table-row {
   display: grid;
-  grid-template-columns: 80px 1fr 100px;
+  grid-template-columns: 80px 1fr 160px;
   gap: 12px;
   padding: 12px;
   transition: background 0.2s ease;
@@ -127,7 +127,7 @@
 @media (max-width: 768px) {
   .table-header,
   .table-row {
-    grid-template-columns: 60px 1fr 80px;
+    grid-template-columns: 60px 1fr 120px;
     gap: 8px;
     padding: 10px;
   }

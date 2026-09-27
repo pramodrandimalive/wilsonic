@@ -25,15 +25,15 @@ const LETTER_COLORS = {
   G: '#FFA726'   // Warning Orange
 }
 
-// Muted colors for baselines (darker, semi-transparent)
+// White baselines for all letters
 const BASELINE_COLORS = {
-  A: '#0A8555',  // Dark green
-  B: '#B8951E',  // Dark yellow
-  C: '#A33041',  // Dark red
-  D: '#2563EB',  // Dark blue
-  E: '#8855C7',  // Dark purple
-  F: '#1F8A85',  // Dark cyan
-  G: '#E67E22'   // Dark orange
+  A: '#FFFFFF',  // White
+  B: '#FFFFFF',  // White
+  C: '#FFFFFF',  // White
+  D: '#FFFFFF',  // White
+  E: '#FFFFFF',  // White
+  F: '#FFFFFF',  // White
+  G: '#FFFFFF'   // White
 }
 
 function RollingFrequencyChart({ trendData }) {

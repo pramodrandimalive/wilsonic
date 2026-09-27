@@ -145,11 +145,9 @@ function Dashboard() {
           <WindowSizeSelector value={windowSize} onChange={setWindowSize} />
         </div>
 
-        {/* Temporarily hidden - Per-Letter Trends */}
-        {/* <LetterTrendCards driftStatus={driftStatus} /> */}
+        <LetterTrendCards driftStatus={driftStatus} />
 
-        {/* Temporarily hidden - Trend Chart Toggle */}
-        {/* <div className="trend-chart-toggle-section">
+        <div className="trend-chart-toggle-section">
           <label className="trend-toggle-switch">
             <input
               type="checkbox"
@@ -159,16 +157,15 @@ function Dashboard() {
             <span className="toggle-slider"></span>
             <span className="toggle-label">Show Rolling Frequency Trend Chart</span>
           </label>
-        </div> */}
+        </div>
 
-        {/* Temporarily hidden - Trend Chart */}
-        {/* {showTrendChart && (
+        {showTrendChart && (
           trendLoading ? (
             <div className="trend-loading">Loading trend data...</div>
           ) : (
             <RollingFrequencyChart trendData={trendData} />
           )
-        )} */}
+        )}
 
         <div className="main-content">
           <div className="left-panel">

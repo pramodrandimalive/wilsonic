@@ -4,18 +4,21 @@ Database configuration and session management for Wilsonic.
 Uses SQLAlchemy with SQLite for MVP, structured for easy migration to PostgreSQL later.
 """
 
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# SQLite database file path (stored in backend directory)
-DATABASE_URL = "sqlite:///./wilsonic.db"
+# SQLite database file path - configurable via environment variable
+# For Railway with mounted volume: set DATABASE_URL=sqlite:////data/wilsonic.db
+# For local development: defaults to sqlite:///./wilsonic.db
+DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./wilsonic.db")
 
 # Create SQLAlchemy engine
 # check_same_thread=False is needed for SQLite to work with FastAPI
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False},
+    connect_args={"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {},
     echo=False  # Set to True for SQL query logging during development
 )
 
